@@ -6,14 +6,17 @@ let audioElement = new Audio('song1.mp3');
 let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
 let gif = document.getElementById('gif');
+let gif2 = document.getElementById('gif2');
 let songItem = Array.from(document.getElementsByClassName('songItem'));
 let song = [
 
-    { songName: "Lambya Lambya", filePath: "song1.mp3", coverPath: "foverImage.jpeg" },
-    { songName: "Mann bharrya..", filePath: "song2.mp3", coverPath: "foverImage.jpeg" },
-    { songName: "Ranjha.........", filePath: "song3.mp3", coverPath: "foverImage.jpeg" },
-    { songName: "Pasoori........", filePath: "song4.mp3", coverPath: "foverImage.jpeg" },
-    { songName: "Sun bhi le.....", filePath: "song5.mp3", coverPath: "foverImage.jpeg" },
+    { songName: "Bishakto Manus", filePath: "song1.mp3", coverPath: "foverImage.jpeg" },
+    { songName: "Gajar Nouka Bhai", filePath: "song2.mp3", coverPath: "foverImage.jpeg" },
+    { songName: "Tamak pata...", filePath: "song3.mp3", coverPath: "foverImage.jpeg" },
+    { songName: "Kano korle by fossils", filePath: "song4.mp3", coverPath: "foverImage.jpeg" },
+    { songName: "Ekla Ghor...", filePath: "song5.mp3", coverPath: "foverImage.jpeg" },
+    { songName: "Marijuana...", filePath: "song6.mp3", coverPath: "foverImage.jpeg" },
+    { songName: "Om Namah Shivay", filePath: "song7.mp3", coverPath: "foverImage.jpeg" },
 ]
 songItem.forEach((element, i) => {
     console.log(element, i)
@@ -27,12 +30,14 @@ masterPlay.addEventListener('click', () => {
         masterPlay.classList.remove('fa-circle-play');
         masterPlay.classList.add('fa-circle-pause');
         gif.style.opacity = 1;
+        gif2.style.opacity = 1;
     }
     else {
         audioElement.pause();
         masterPlay.classList.remove('fa-circle-pause');
         masterPlay.classList.add('fa-circle-play');
         gif.style.opacity = 0;
+        gif2.style.opacity = 0;
     }
 })
 audioElement.addEventListener('timeupdate', () => {
